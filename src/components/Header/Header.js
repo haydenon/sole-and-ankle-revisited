@@ -1,10 +1,12 @@
-import React from 'react';
-import styled from 'styled-components/macro';
+import React from "react";
+import styled from "styled-components/macro";
 
-import { COLORS, WEIGHTS } from '../../constants';
-import Logo from '../Logo';
-import SuperHeader from '../SuperHeader';
-import MobileMenu from '../MobileMenu';
+import { COLORS, QUERIES, WEIGHTS } from "../../constants";
+import Logo from "../Logo";
+import Icon from "../Icon";
+import SuperHeader from "../SuperHeader";
+import UnstyledButton from "../UnstyledButton";
+import MobileMenu from "../MobileMenu";
 
 const Header = () => {
   const [showMobileMenu, setShowMobileMenu] = React.useState(false);
@@ -29,6 +31,17 @@ const Header = () => {
           <NavLink href="/kids">Kids</NavLink>
           <NavLink href="/collections">Collections</NavLink>
         </Nav>
+        <ButtonsWrapper>
+          <UnstyledButton>
+            <Icon id="shopping-bag" strokeWidth={2} size={20} />
+          </UnstyledButton>
+          <UnstyledButton>
+            <Icon id="search" strokeWidth={2} size={20} />
+          </UnstyledButton>
+          <UnstyledButton onClick={() => setShowMobileMenu(true)}>
+            <Icon id="menu" strokeWidth={2} size={20} />
+          </UnstyledButton>
+        </ButtonsWrapper>
         <Side />
       </MainHeader>
 
@@ -39,6 +52,20 @@ const Header = () => {
     </header>
   );
 };
+
+const ButtonsWrapper = styled.div`
+  display: none;
+
+  @media ${QUERIES.tabletAndBelow} {
+    display: flex;
+    flex: 0 1 0;
+    gap: 40px;
+  }
+
+  @media ${QUERIES.phoneAndBelow} {
+    gap: 24px;
+  }
+`;
 
 const MainHeader = styled.div`
   display: flex;
@@ -52,10 +79,20 @@ const Nav = styled.nav`
   display: flex;
   gap: 48px;
   margin: 0px 48px;
+
+  @media ${QUERIES.tabletAndBelow} {
+    display: none;
+  }
 `;
 
 const Side = styled.div`
   flex: 1;
+
+  @media ${QUERIES.tabletAndBelow} {
+    &:last-child {
+      display: none;
+    }
+  }
 `;
 
 const NavLink = styled.a`
