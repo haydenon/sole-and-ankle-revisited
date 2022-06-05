@@ -76,6 +76,10 @@ const MainHeader = styled.div`
   border-bottom: 1px solid var(--color-gray-300);
   overflow-x: auto;
   overflow-y: auto;
+
+  @media ${QUERIES.phoneAndBelow} {
+    padding: 18px 16px;
+  }
 `;
 
 const Nav = styled.nav`
