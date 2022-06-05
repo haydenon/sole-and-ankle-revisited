@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components/macro";
 
-import { COLORS, QUERIES } from "../../constants";
+import { QUERIES } from "../../constants";
 
 import SearchInput from "../SearchInput";
 import UnstyledButton from "../UnstyledButton";
@@ -25,8 +25,8 @@ const SuperHeader = () => {
 };
 
 const Wrapper = styled.div`
-  color: ${COLORS.gray[300]};
-  background-color: ${COLORS.gray[900]};
+  color: var(--color-gray-300);
+  background-color: var(--color-gray-900);
 
   height: 40px;
 
@@ -50,7 +50,7 @@ const HeaderContents = styled.div`
 `;
 
 const MarketingMessage = styled.span`
-  color: ${COLORS.white};
+  color: var(--color-white);
   margin-right: auto;
 `;
 

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components/macro";
 
-import { COLORS, QUERIES, WEIGHTS } from "../../constants";
+import { QUERIES } from "../../constants";
 import Logo from "../Logo";
 import Icon from "../Icon";
 import SuperHeader from "../SuperHeader";
@@ -73,7 +73,7 @@ const MainHeader = styled.div`
   align-items: baseline;
   padding: 18px 32px;
   height: 72px;
-  border-bottom: 1px solid ${COLORS.gray[300]};
+  border-bottom: 1px solid var(--color-gray-300);
   overflow-x: auto;
   overflow-y: auto;
 `;

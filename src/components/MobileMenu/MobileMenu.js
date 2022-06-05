@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components/macro";
 import { DialogOverlay, DialogContent } from "@reach/dialog";
 
-import { COLORS, QUERIES, WEIGHTS } from "../../constants";
+import { QUERIES } from "../../constants";
 
 import UnstyledButton from "../UnstyledButton";
 import Icon from "../Icon";
@@ -66,7 +66,7 @@ const Footer = styled.footer`
 `;
 
 const Overlay = styled(DialogOverlay)`
-  background: ${COLORS.gray[700]};
+  background: var(--color-gray-700);
   z-index: 1;
   background: rgba(0, 0, 0, 0.33);
   bottom: 0;
@@ -84,7 +84,7 @@ const Content = styled(DialogContent)`
   bottom: 0;
 
   width: 300px;
-  background: ${COLORS.white};
+  background: var(--color-white);
   padding: 32px;
   display: flex;
   flex-direction: column;
@@ -92,11 +92,11 @@ const Content = styled(DialogContent)`
 `;
 
 const FooterLink = styled.a`
-  color: ${COLORS.gray[700]};
+  color: var(--color-gray-700);
   text-decoration: none;
 
   &:hover {
-    color: ${COLORS.gray[900]};
+    color: var(--color-gray-900);
   }
 `;
 
