@@ -14,8 +14,10 @@ const ShoeIndex = ({ sortId, setSortId }) => {
     <Wrapper>
       <MainColumn>
         <Header>
-          <HeaderBreadcrumbs />
-          <Title>Running</Title>
+          <div>
+            <HeaderBreadcrumbs />
+            <Title>Running</Title>
+          </div>
           <SelectWrapper>
             <Select
               label="Sort"
@@ -83,7 +85,7 @@ const Header = styled.header`
   align-items: baseline;
 
   @media ${QUERIES.tabletAndBelow} {
-    flex-direction: column;
+    align-items: center;
   }
 `;
 
@@ -93,7 +95,7 @@ const Title = styled.h2`
 `;
 
 const SelectWrapper = styled.div`
-  @media ${QUERIES.tabletAndBelow} {
+  @media ${QUERIES.phoneAndBelow} {
     display: none;
   }
 `;
