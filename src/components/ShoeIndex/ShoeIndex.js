@@ -85,7 +85,7 @@ const Header = styled.header`
   align-items: baseline;
 
   @media ${QUERIES.tabletAndBelow} {
-    align-items: center;
+    align-items: flex-end;
   }
 `;
 
