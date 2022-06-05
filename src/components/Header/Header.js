@@ -74,12 +74,16 @@ const MainHeader = styled.div`
   padding: 18px 32px;
   height: 72px;
   border-bottom: 1px solid ${COLORS.gray[300]};
+  overflow-x: auto;
+  overflow-y: auto;
 `;
 
 const Nav = styled.nav`
   display: flex;
-  gap: 48px;
+  gap: clamp(1rem, 10vw - 4.75rem, 4rem);
   margin: 0px 48px;
+  white-space: nowrap;
+  flex: 0 0 0%;
 
   @media ${QUERIES.tabletAndBelow} {
     display: none;
